@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Form, Button, Col, Container } from "react-bootstrap";
+import "./style.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="container">
+        <h1>Enter your E-mail and Password</h1>
+        <form>
+          <fieldset>
+            <label>
+              <p>E-mail</p>
+              <Form.Control type="email" placeholder="email@example.com" />
+              <p>Password</p>
+              <Form.Control type="password" placeholder="password" />
+            </label>
+          </fieldset>
+          <div className="button">
+            <Button variant="dark">Login</Button>
+          </div>
+        </form>
+      </div>
+    );
+  }
 }
 
 export default App;
